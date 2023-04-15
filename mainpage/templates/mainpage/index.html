@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Mikhail's Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+<header class="header">
+    <a href="" class="header__logo">Панин</a>
+    <div class="header__menu menu">
+        <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu__body">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Работы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Блог</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="#" class="menu__link__btn">
+                    <button class="menu__item__btn">Вход</button>
+                </a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <a href="#" class="login__ico"><img src="{% static 'img/user.png' %}" alt="usr"></a>
+    <a href="#" class="btn__link">
+        <button class="login__button">Вход</button>
+    </a>
+
+</header>
+
+<main>
+    <section id="about" class="main">
+        <div  class="text-container"><h1>Добро пожаловать</h1></div>
+    </section>
+    <section id="portfolio">
+        <div class="title">Портфолио</div>
+    </section>
+    <section id="reviews">
+        <div class="title">Отзывы</div>
+    </section>
+    <section id="contacts">
+        <div class="title">Контакты</div>
+    </section>
+
+</main>
+<footer>Подвал</footer>
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+  window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+  }
+</script>
+</body>
+</html>

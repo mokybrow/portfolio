@@ -1,0 +1,370 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------Шапка страницы--------*/
+.header {
+    font-family: 'Inter', sans-serif;
+    /*background-color: #27292b;*/
+    height: 48px;
+    padding: 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+}
+
+/*---------Тело страницы--------*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+
+/*-------Пункт мобильного меню вход скрыт в настольном режиме-------*/
+.menu__link__btn {
+    display: none;
+}
+
+/*-------Логотип сайта-------*/
+
+.header__logo {
+    text-transform: uppercase;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #E5E4E2;
+    font-weight: 900;
+}
+
+/*-------Кнопка входа в настольном режиме-------*/
+.login__button {
+    border: solid 2px #E5E4E2;
+    font-size: 20px;
+    color: #E5E4E2;
+    background: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.login__button:hover {
+    background-color: #f15412;
+}
+
+/*----------Наполнение----------*/
+section {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+section:nth-child(even) {
+    background-color: #f15412;
+}
+
+section:nth-child(odd) {
+    background-color: #34b3f1;
+}
+
+/*------Анимация фона текста-------*/
+.text-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container h1{
+  margin: 0;
+  font-size: 150px;
+  color: rgba(225,225,225, .01);
+  background-image: url("https://gas-kvas.com/uploads/posts/2023-02/1675469462_gas-kvas-com-p-fonovii-risunok-kod-3.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+  @keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }
+}
+
+/*------Днище сайта--------*/
+footer {
+    height: 48px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.menu__icon {
+    display: none;
+}
+
+/*----Кнопка входа в мобильном меню скрыта в настольном*/
+.login__ico {
+    width: 30px;
+    height: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .menu__icon {
+        order: 1;
+    }
+
+    .header__logo {
+        order: 2;
+    }
+
+    .btn__link {
+        display: none;
+    }
+
+    .menu__item__btn {
+        display: flex;
+    }
+
+    .login__ico {
+        display: flex;
+        order: 3;
+    }
+
+    .menu__icon {
+        display: block;
+        width: 30px;
+        height: 18px;
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+    .menu__icon span {
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #E5E4E2;
+        transition: all 0.2s;
+    }
+
+    .menu__icon span:first-child {
+        top: 0;
+    }
+
+    .menu__icon span:last-child {
+        top: auto;
+        bottom: 0;
+    }
+
+    .menu__icon.active span {
+        transform: scale(0);
+    }
+
+    .menu__icon.active span:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+    }
+
+    .menu__icon.active span:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+    }
+}
+
+@media (max-width: 900px) {
+    .menu__body {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.2s;
+    }
+}
+
+.menu__body.active {
+    transform: translateY(100%);
+}
+
+.menu__list {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 900px) {
+    .menu__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        gap: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #fb6240;
+        overflow: auto;
+    }
+}
+
+.menu__link {
+    color: #E5E4E2;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.menu__link:hover {
+    color: #f15412;
+}
+
+@media (max-width: 900px) {
+    .menu__link {
+        text-decoration: none;
+        display: block;
+        font-size: 30px;
+        line-height: 70px;
+        transition: 0.3s;
+    }
+
+    /*--------------------Ссылка кнопки вход--------------------*/
+    .menu__link__btn {
+        display: flex;
+        text-decoration: none;
+        padding: 30px;
+    }
+
+    /*--------------------Кнопка вход--------------------*/
+    .menu__item__btn {
+        text-decoration: none;
+        border: solid 4px #E5E4E2;
+        font-weight: bold;
+        font-size: 30px;
+        color: #E5E4E2;
+        background: none;
+        padding: 4px 8px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+/*-------------ПРЕЛОАДЕР-------------*/
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #e0e0e0;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #337ab7;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+/*-------------КОНЕЦ ПРЕЛОАДЕРА-------------*/
