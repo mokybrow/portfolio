@@ -752,7 +752,7 @@ body {
   left: -50%;
   top: -50%;
   background-image: url("/static/img/gain.png");
-  animation:grain 1.5s steps(6) infinite;
+  animation:grain 5.5s steps(6) infinite;
 }
 .grain-img {
   z-index: -1;
