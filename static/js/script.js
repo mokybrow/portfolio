@@ -136,6 +136,7 @@ window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 span.classList.add('active')
             }, (idx + 1) * 400);
+
         });
 
         setTimeout(() => {
@@ -151,3 +152,4 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 2600);
     })
 })
+
