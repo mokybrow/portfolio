@@ -93,6 +93,7 @@ $(document).ready(function () {
 
 
 //плавное скрытие хидера
+
 $(document).ready(() => { // DOM готов к взаимодейтсвию
 
     const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
