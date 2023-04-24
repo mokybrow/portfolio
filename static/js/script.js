@@ -1,3 +1,7 @@
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
+
 const menu = document.querySelector('.menu__body')
 const menuBtn = document.querySelector('.menu__icon')
 
@@ -51,7 +55,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: '20vw',
+        centerPadding: '25vw',
         draggable: false,
         autoplay: true,
         autoplaySpeed: 5000,
@@ -132,10 +136,11 @@ let intro = document.querySelector('.intro')
 let logo = document.querySelector('.logo-header')
 let logoSpan = document.querySelectorAll('.logo')
 window.addEventListener('DOMContentLoaded', () => {
+    $('body').addClass('stop-scrolling')
     setTimeout(() => {
         logoSpan.forEach((span, idx) => {
             setTimeout(() => {
-                span.classList.add('active')
+                span.classList.add('active');
             }, (idx + 1) * 400);
 
         });
@@ -149,27 +154,30 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }, 2000);
         setTimeout(() => {
-            intro.style.top = '-100vh'
-        }, 2600);
+            intro.style.top = '-100vh';
+            $('body').removeClass('stop-scrolling')
+
+        }, 2800);
     })
 })
 
-var StickyElement = function(node){
+//Шум на фон?
+var StickyElement = function (node) {
     var doc = $(document),
-    fixed = false,
-    anchor = node.find('.sticky-anchor'),
-    content = node.find('.sticky-content');
-    var onScroll = function(e){
+        fixed = false,
+        anchor = node.find('.sticky-anchor'),
+        content = node.find('.sticky-content');
+    var onScroll = function (e) {
         var docTop = doc.scrollTop(),
-        anchorTop = anchor.offset().top;
-        if(docTop > anchorTop){
-            if(!fixed){
+            anchorTop = anchor.offset().top;
+        if (docTop > anchorTop) {
+            if (!fixed) {
                 anchor.height(content.outerHeight());
                 content.addClass('fixed');
                 fixed = true;
             }
-            } else {
-            if(fixed){
+        } else {
+            if (fixed) {
                 anchor.height(0);
                 content.removeClass('fixed');
                 fixed = false;
@@ -179,3 +187,16 @@ var StickyElement = function(node){
     $(window).on('scroll', onScroll);
 };
 var sticky = new StickyElement($('.sticky-element'));
+
+//Отключение прокрутки
+function disableScroll() {
+    document.body.classList.add("stop-scrolling");
+}
+
+setTimeout(disableScroll, 0)
+
+function enableScroll() {
+    document.body.classList.remove("stop-scrolling");
+}
+
+setTimeout(enableScroll, 3100)
