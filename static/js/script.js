@@ -77,7 +77,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
-                    centerPadding: '15vw',
+                    // centerPadding: '15vw',
                 }
             },
             {
@@ -86,7 +86,7 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
-                    centerPadding: '10vw',
+                    // centerPadding: '10vw',
                 }
             }
         ]
