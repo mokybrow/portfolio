@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Neucha&family=Old+Standard+TT&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -381,7 +381,7 @@ hr {
 }
 
 .slider-image h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 600;
     color: rgba(39, 41, 43, 1);
     font-size: 2vh;
@@ -469,19 +469,32 @@ section:nth-child(2) {
 }
 
 .carousel__title {
+    margin: 5vh 0;
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box;
     display: flex;
-    /*justify-content: center;*/
+    justify-content: center;
 }
 
 h2.carousel-title {
+    /*margin-bottom: 4vh;*/
     color: rgba(39, 41, 43, 1);
-    font-size: 4vw;
-    font-family: 'Inter', sans-serif;
+    font-size: 3vw;
+    font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    h2.carousel-title {
+        /*margin-bottom: 4vh;*/
+        color: rgba(39, 41, 43, 1);
+        font-size: 8vw;
+        font-family: 'Rubik', sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
 }
 
 /*АНИМАЦИЯ ТЕКСТА*/
@@ -587,11 +600,12 @@ h2.carousel-title {
     margin-right: 0vw;
     margin-bottom: 0px;
     /*font-family: 'Old Standard TT', serif;*/
-    font-family: 'Neucha', cursive;
+    /*font-family: 'Neucha', cursive;*/
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     color: rgba(39, 41, 43, 1);
-    font-size: 22vw;
+    font-size: 20vw;
     line-height: 100%;
-    font-weight: 300;
     text-align: center;
     letter-spacing: -0.51vw;
     text-transform: uppercase;

@@ -169,32 +169,34 @@
             <div class="carousel__title"><h2 class="carousel-title">Последние работы</h2></div>
             <div class="content">
                 <div class="slider center">
+                    {% for w in works %}
                     <div>
                         <a href="#" class="portfolio-link">
                             <div class="slider-image">
-                                <img src="{% static 'img/мы.jpg' %}" alt=""/>
-                                <h3>Красивая пара</h3>
-                            </div>
-                        </a>
-                    </div>
 
-                    <div>
-                        <a href="#" class="portfolio-link">
-                            <div class="slider-image">
-                                <img src="{% static 'img/кэт.jpg' %}"/>
-                                <h3>Уставший котик</h3>
+                                <img src="{{w.photo.url}}" alt=""/>
+                                <h3>{{ w.title }}</h3>
                             </div>
                         </a>
                     </div>
-
-                    <div>
-                        <a href="#" class="portfolio-link">
-                            <div class="slider-image">
-                                <img src="{% static 'img/мы.jpg' %}"/>
-                                <h3>Снова красивая пара</h3>
-                            </div>
-                        </a>
-                    </div>
+                    {% endfor %}
+{#                    <div>#}
+{#                        <a href="#" class="portfolio-link">#}
+{#                            <div class="slider-image">#}
+{#                                <img src="{% static 'img/кэт.jpg' %}"/>#}
+{#                                <h3>Уставший котик</h3>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                    </div>#}
+{##}
+{#                    <div>#}
+{#                        <a href="#" class="portfolio-link">#}
+{#                            <div class="slider-image">#}
+{#                                <img src="{% static 'img/мы.jpg' %}"/>#}
+{#                                <h3>Снова красивая пара</h3>#}
+{#                            </div>#}
+{#                        </a>#}
+{#                    </div>#}
                 </div>
             </div>
 
