@@ -11,27 +11,19 @@
     <script src="{% static 'minjs/ScrollTrigger.min.js' %}" defer></script>
     <script src="{% static 'minjs/ScrollSmoother.min.js' %}" defer></script>
 
+
     <link rel="stylesheet" href="{% static 'css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body class="body">
 
-<div class="sticky-element">
-    <div class="sticky-anchor"></div>
-    <div class="sticky-content">
-    </div>
-</div>
+{% block intro %}
+{% endblock %}
 
 
-<div class="intro">
-    <h1 class="logo-header">
-        <span class="logo">Михаил Панин</span>
-        {#        <span class="logo">Создатель денег.</span>#}
-        <br>
-    </h1>
-</div>
 <div class="main__list">
+
     <header class="header">
         <a href="{% url 'home' %}" class="header__logo">Панин</a>
         <div class="header__menu menu">
