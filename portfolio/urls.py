@@ -19,12 +19,17 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 
-from mainpage.views import homepage
+from mainpage.views import homepage, portfolio, blog, contacts, say_hi
 from portfolio import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homepage)
+    path('', homepage, name='home'),
+    path('works/', portfolio, name='works'),
+    path('blog/', blog, name='blog'),
+    path('contacts/', contacts, name='contacts'),
+    path('hello/', say_hi, name='say_hi'),
+
 ]
 
 

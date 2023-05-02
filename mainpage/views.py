@@ -7,4 +7,19 @@ from .models import *
 
 def homepage(request):
     works = Works.objects.all()
-    return render(request, "mainpage/index.html", {'works': works,})
+    return render(request, "mainpage/mainpage.html", {'works': works, })
+
+
+def portfolio(request):
+    return render(request, "mainpage/works.html")
+
+
+def blog(request):
+    return render(request, "mainpage/blog.html")
+
+
+def contacts(request):
+    return render(request, "mainpage/contacts.html")
+
+def say_hi(request):
+    return render(request, "mainpage/say_hi.html")
