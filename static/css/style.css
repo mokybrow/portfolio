@@ -376,7 +376,7 @@ body.lock {
         height: auto;
         max-width: 80%;
         max-height: 60%;
-        margin: 10vh 0;
+        margin: 6vh 0;
         /*width: 50%;*/
         /*height: 100%;*/
         left: 0;
@@ -388,7 +388,6 @@ body.lock {
         color: #E5E4E2;
         font-size: 8vw;
     }
-
 }
 
 
@@ -433,6 +432,29 @@ body.lock {
     overflow: hidden;
 }
 
+
+.contacts-page {
+    display: flex;
+    height: calc(100vh - 10px);
+    position: relative;
+    top: 0;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
+.hello-page {
+    display: flex;
+    height: calc(100vh - 10px);
+    position: relative;
+    top: 0;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 5px 5px;
+}
+
 /*------Днище сайта--------*/
 footer {
     height: calc(50% - 10px);
@@ -465,7 +487,7 @@ hr {
     opacity: 0.5;
 }
 
-/* Настройки маркированного списка */
+/* Выпадающая шторка */
 
 
 .block_2 {
@@ -534,7 +556,7 @@ hr {
     border-radius: 10px;
 }
 
-/*СВАЙПЕР*/
+/*------------------СВАЙПЕР--------------*/
 .swiper {
     width: 100%;
     height: 100%;
@@ -575,8 +597,24 @@ hr {
     transition-duration: 100ms !important;
 }
 
+.contacts-page-swiper{
+    transition-duration: 100ms !important;
+}
 
 .main-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contacts-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.hello-swiper {
     width: 100%;
     height: 100%;
     overflow: hidden;

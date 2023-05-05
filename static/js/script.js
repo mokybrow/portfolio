@@ -42,7 +42,23 @@ mediaQuery.addListener(handleTabletChange)
 handleTabletChange(mediaQuery)
 
 
-//Свайпер
+//Свайперы
+
+const mainSwiper = new Swiper('.main-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
@@ -59,7 +75,8 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-const swiper2 = new Swiper('.main-swiper', {
+
+const contactsSwiper = new Swiper('.contacts-swiper', {
     // Optional parameters
     direction: 'vertical',
     speed: 800,
@@ -73,8 +90,24 @@ const swiper2 = new Swiper('.main-swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+const helloSwiper = new Swiper('.hello-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 //Звёздочки
-function init(){
+function init() {
 
     //estrelas
 
@@ -83,7 +116,7 @@ function init(){
     var opacity = ["opacity1", "opacity1", "opacity1", "opacity2", "opacity2", "opacity3"];
 
     function getRandomArbitrary(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (max - min)) + min;
     }
 
     var estrela = "";
@@ -93,13 +126,13 @@ function init(){
     var heightWindow = window.innerHeight;
 
     for (var i = 0; i < qtdeEstrelas; i++) {
-      estrela += "<span class='estrela " + style[getRandomArbitrary(0, 4)] + " " + opacity[getRandomArbitrary(0, 6)] + " "
-      + tam[getRandomArbitrary(0, 5)] + "' style='animation-delay: ." +getRandomArbitrary(0, 9)+ "s; left: "
-      + getRandomArbitrary(0, widthWindow) + "px; top: " + getRandomArbitrary(0, heightWindow) + "px;'></span>";
+        estrela += "<span class='estrela " + style[getRandomArbitrary(0, 4)] + " " + opacity[getRandomArbitrary(0, 6)] + " "
+            + tam[getRandomArbitrary(0, 5)] + "' style='animation-delay: ." + getRandomArbitrary(0, 9) + "s; left: "
+            + getRandomArbitrary(0, widthWindow) + "px; top: " + getRandomArbitrary(0, heightWindow) + "px;'></span>";
     }
 
     noite.innerHTML = estrela;
 
-  }
+}
 
-  window.onload = init;
+window.onload = init;
