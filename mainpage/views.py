@@ -11,7 +11,8 @@ def homepage(request):
 
 
 def portfolio(request):
-    return render(request, "mainpage/works.html")
+    works = Works.objects.all()
+    return render(request, "mainpage/works.html", {'works': works, })
 
 
 def blog(request):
