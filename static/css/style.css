@@ -390,6 +390,33 @@ body.lock {
     }
 }
 
+.t1 {
+    transform: translateX(150%);
+    animation: ani 1s forwards;
+}
+
+@keyframes ani {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.t2 {
+    transform: translateX(-250%);
+    animation: ani2 1s forwards;
+}
+
+@keyframes ani2 {
+    0% {
+        transform: translateX(-250%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .work-list {
     height: 100%;
@@ -597,7 +624,7 @@ hr {
     transition-duration: 100ms !important;
 }
 
-.contacts-page-swiper{
+.contacts-page-swiper {
     transition-duration: 100ms !important;
 }
 
