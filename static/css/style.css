@@ -20,7 +20,6 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: absolute;
-
 }
 
 body.lock {
@@ -472,7 +471,7 @@ hr {
 .block_2 {
     position: absolute;
     visibility: hidden;
-    background-color: rgba(39, 41, 43, 1);
+    background-color: #0d0e0e;
     font-size: 20px;
     color: white;
     width: 30vw;
@@ -486,8 +485,11 @@ hr {
 }
 
 .block_2 p {
-
+    font-family: 'Inter', sans-serif;
     text-align: center;
+    font-weight: 600;
+    color: #E5E4E2;
+    font-size: 3vw;
 }
 
 .hover-text:hover .block_2 {
@@ -503,7 +505,7 @@ hr {
         position: absolute;
         visibility: hidden;
         left: 0;
-        background-color: rgba(39, 41, 43, 1);
+        background-color: #0d0e0e;
         font-size: 20px;
         width: 100%;
         height: 20vh;
@@ -517,6 +519,14 @@ hr {
         -webkit-transition: 1s;
         transform: translateY(-18vh);
         -webkit-transform: translateY(-18vh)
+    }
+
+    .block_2 p {
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        font-weight: 600;
+        color: #E5E4E2;
+        font-size: 6vw;
     }
 }
 
@@ -557,13 +567,14 @@ hr {
     height: 100vh;
 }
 
-.work-page-swiper {
-    transition-duration: 80ms !important;
+.main-page-swiper {
+    transition-duration: 100ms !important;
 }
 
-.main-page-swiper {
-    transition-duration: 80ms !important;
+.work-page-swiper {
+    transition-duration: 100ms !important;
 }
+
 
 .main-swiper {
     width: 100%;
@@ -672,17 +683,16 @@ hr {
 }
 
 
+/*@keyframes estrela {*/
+/*    0% {*/
+/*        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);*/
+/*    }*/
 
-@keyframes estrela {
-    0% {
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
-    }
+/*    50% {*/
+/*        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);*/
+/*    }*/
 
-    50% {
-        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
-    }
-
-    100% {
-        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
-    }
-}
+/*    100% {*/
+/*        box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);*/
+/*    }*/
+/*}*/
