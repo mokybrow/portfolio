@@ -75,6 +75,22 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+const blogSwiper = new Swiper('.blog-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 2,
+
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 const contactsSwiper = new Swiper('.contacts-swiper', {
     // Optional parameters

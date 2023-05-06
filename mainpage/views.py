@@ -16,7 +16,8 @@ def portfolio(request):
 
 
 def blog(request):
-    return render(request, "mainpage/blog.html")
+    works = Works.objects.all()
+    return render(request, "mainpage/blog.html", {'works': works, })
 
 
 def contacts(request):

@@ -1,4 +1,5 @@
 {% extends 'mainpage/index.html' %}
+{% load static %}
 {#{% block intro %}#}
 {#    <div class="intro">#}
 {#        <h1 class="logo-header">#}
@@ -9,10 +10,42 @@
 {#{% endblock %}#}
 {% block content %}
 
+    <main>
+        <div class="blog-page">
+            <div class="blog-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper blog-page-swiper">
+                    <!-- Slides -->
+                    {% for w in works %}
+                        <div class="swiper-slide">
+                            <a href="#" class="hover-text">
+                                <div class="block_2">
+                                    <p>{{ w.title }}</p>
+                                </div>
+                                <img src="{{ w.photo.url }}" alt="" class="work-image">
+                            </a>
+                        </div>
 
-<div class="main-page">
+                    {% endfor %}
+                    <div class="swiper-slide empty-slide half-slide">
 
-</div>
+
+                    </div>
+                </div>
 
 
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                {#                <!-- If we need navigation buttons -->#}
+                {#                <div class="swiper-button-prev"></div>#}
+                {#                <div class="swiper-button-next"></div>#}
+                {##}
+                {#                <!-- If we need scrollbar -->#}
+                {#                <div class="swiper-scrollbar"></div>#}
+            </div>
+
+        </div>
+        </div>
+    </main>
 {% endblock %}

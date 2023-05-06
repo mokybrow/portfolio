@@ -498,6 +498,18 @@ body.lock {
     overflow: hidden;
 }
 
+.blog-page {
+    display: flex;
+    /*height: calc(92vh - 15px);*/
+    height: calc(100vh - 10px);
+    position: relative;
+    top: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
 
 .contacts-page {
     display: flex;
@@ -680,6 +692,7 @@ hr {
     }
 }
 
+
 .swiper-wrapper {
     background: none;
     height: 100vh;
@@ -690,7 +703,11 @@ hr {
 }
 
 .work-page-swiper {
-    transition-duration: 100ms !important;
+    transition-duration: 80ms !important;
+}
+
+.blog-page-swiper {
+    transition-duration: 60ms !important;
 }
 
 .contacts-page-swiper {
@@ -700,6 +717,14 @@ hr {
 .main-swiper {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.blog-swiper {
+    width: 100%;
+    height: 100%;
+    background: none;
+    position: absolute;
     overflow: hidden;
 }
 
