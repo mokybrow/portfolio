@@ -357,6 +357,25 @@ body.lock {
     font-size: 5vw;
 }
 
+
+.title-of-work {
+    font-family: 'Inter', sans-serif;
+    color: #E5E4E2;
+    font-size: 5vw;
+    top: 0;
+}
+
+.title-text-description{
+    margin: 10vh 0;
+    padding: 100px 100px;
+}
+.description-name {
+    margin: 15vh 0;
+    font-family: 'Inter', sans-serif;
+    color: #E5E4E2;
+    font-size: 2vw;
+}
+
 @media (max-width: 600px) {
     .me-image-container {
         width: 100%;
@@ -472,7 +491,16 @@ body.lock {
     border-radius: 10px;
     margin: 5px 5px;
 }
-
+.portfolio-page {
+    display: flex;
+    height: calc(100vh - 10px);
+    position: relative;
+    top: 0%;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 5px 5px;
+}
 .work-item1 {
     height: 52vh;
     /*background-color: #fafafa;*/
@@ -533,6 +561,7 @@ body.lock {
     flex-direction: column;
 }
 
+
 .contacts-title {
     font-family: 'Inter', sans-serif;
     color: #E5E4E2;
@@ -562,6 +591,72 @@ body.lock {
     justify-content: center;
     margin: 5px 5px;
 }
+
+.form-container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/*-------Стили формы------------*/
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input-box {
+    height: 50px; /* по сути задаем высоту input'а */
+    width: 100%; /* ширина на всю ширину правой колонки (с учетом padding) */
+    margin-bottom: 20px; /* отступаем снизу 20px */
+}
+
+.input-box input,
+.input-box textarea {
+    font-family: "Rubik", sans-serif;
+    height: 100%; /* растягиваем на всю высоту контейнера 50px */
+    width: 100%; /* растягиваем на всю ширину */
+    border: none; /* убираем внешние края */
+    border-radius: 10px; /* скругляем края */
+    background: #E5E4E2; /* задаем цвет фона */
+    padding: 0 20px; /* отступ справа и слева 20px */
+}
+
+.input-box textarea {
+    resize: none; /* чтобы нельзя было менять высоту */
+    padding: 20px;
+}
+
+.right-side {
+    width: 35%; /* занимает 75% общей ширины */
+}
+
+.message-box {
+    min-height: 110px; /* минимальная высота 110px */
+}
+
+/* Стили для контейнера кнопки */
+.button {
+    display: inline-block; /* делаем блочно-строчный элемент */
+    color: #E5E4E2;
+    font-size: 18px;
+    background: #3e2093;
+    outline: none;
+    border: none;
+    right: 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.2s; /* чтобы плавно менялся цвет при наведении (:hover) */
+    cursor: pointer;
+}
+
+
+/*-------Стили формы------------*/
 
 /*------Днище сайта--------*/
 footer {
@@ -713,7 +808,9 @@ hr {
 .contacts-page-swiper {
     transition-duration: 100ms !important;
 }
-
+.work-item-page-swiper {
+    transition-duration: 100ms !important;
+}
 .main-swiper {
     width: 100%;
     height: 100%;
@@ -732,14 +829,17 @@ hr {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
 }
 
 .hello-swiper {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
+}
+.portfolio-swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .half-element {

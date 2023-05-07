@@ -16,13 +16,13 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper blog-page-swiper">
                     <!-- Slides -->
-                    {% for w in works %}
+                    {% for p in posts %}
                         <div class="swiper-slide">
-                            <a href="#" class="hover-text">
+                            <a href="{% url 'post' p.slug %}" class="hover-text">
                                 <div class="block_2">
-                                    <p>{{ w.title }}</p>
+                                    <p>{{ p.title }}</p>
                                 </div>
-                                <img src="{{ w.photo.url }}" alt="" class="work-image">
+                                <img src="{{ p.photo.url }}" alt="" class="work-image">
                             </a>
                         </div>
 

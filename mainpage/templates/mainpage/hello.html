@@ -1,0 +1,68 @@
+{% extends 'mainpage/index.html' %}
+{#{% block intro %}#}
+{#    <div class="intro">#}
+{#        <h1 class="logo-header">#}
+{#            <span class="logo">Привет</span>#}
+{#            <br>#}
+{#        </h1>#}
+{#    </div>#}
+{#{% endblock %}#}
+
+{% block content %}
+
+    <div class="hello-page">
+        <div class="hello-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper contacts-page-swiper">
+                <!-- Slides -->
+                <div class="swiper-slide ">
+                    <div class="constelacao"></div>
+                    <div class="form-container">
+                        <!-- Форма обратной связи -->
+                        <div class="right-side">
+                            <form action="{% url 'hello' %}" method="post">
+                                {% csrf_token %}
+                                <!-- Каждый input для выравнивания вкладываем в блок input-box -->
+                                <div class="input-box">
+                                    {% if form.name.errors %}
+                                        <div class="alert alert-damage">
+                                            <strong>{{ form.name.errors }}</strong>
+                                        </div>
+                                    {% endif %}
+                                    {#                                    <input type="text" placeholder="Ваше имя"/>#}
+                                    {{ form.name }}
+                                </div>
+                                <div class="input-box">
+                                    {% if form.email.errors %}
+                                        <div class="alert alert-damage">
+                                            <strong>{{ form.email.errors }}</strong>
+                                        </div>
+                                    {% endif %}
+                                    {#                                    <input type="text" placeholder="Введите email"/>#}
+                                    {{ form.email }}
+                                </div>
+
+                                <div class="input-box message-box">
+                                    {% if form.message.errors %}
+                                        <div class="alert alert-damage">
+                                            <strong>{{ form.message.errors }}</strong>
+                                        </div>
+                                    {% endif %}
+                                    {#                                    <textarea placeholder="Сообщение"></textarea>#}
+                                    {{ form.message }}
+                                </div>
+                                <button type="submit" class="button">Отправить</button>
+                                {#                                <div class="button">#}
+                                {#                                    <input type="button" value="Отправить"/>#}
+                                {#                                </div>#}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

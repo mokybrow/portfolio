@@ -12,7 +12,7 @@
                     <!-- Slides -->
                     {% for w in works %}
                         <div class="swiper-slide">
-                            <a href="#" class="hover-text">
+                            <a href="{% url 'work' w.slug %}" class="hover-text">
                                 <div class="block_2">
                                     <p>{{ w.title }}</p>
                                 </div>

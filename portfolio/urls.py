@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 
-from mainpage.views import homepage, portfolio, blog, contacts, say_hi
+from mainpage.views import homepage, portfolio, blog, contacts, hello, work_item, post
 from portfolio import settings
 
 urlpatterns = [
@@ -28,8 +28,9 @@ urlpatterns = [
     path('works/', portfolio, name='works'),
     path('blog/', blog, name='blog'),
     path('contacts/', contacts, name='contacts'),
-    path('hello/', say_hi, name='say_hi'),
-
+    path('hello/', hello, name='hello'),
+    path('work/<slug:work_slug>/', work_item, name='work'),
+    path('blog/<slug:post_slug>/', post, name='post'),
 ]
 
 

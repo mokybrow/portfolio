@@ -58,6 +58,20 @@ const mainSwiper = new Swiper('.main-swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+const portfolioSwiper = new Swiper('.portfolio-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 1,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -121,6 +135,8 @@ const helloSwiper = new Swiper('.hello-swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+
 
 //Звёздочки
 function init() {
