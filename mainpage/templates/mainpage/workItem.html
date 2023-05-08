@@ -9,25 +9,44 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper work-item-page-swiper">
                     <!-- Slides -->
-                    <div class="swiper-slide ">
-                        <div class="me-image-container">
-                            <img src="{{ works.photo.url }}" alt="Технические чоколадки" class="me-image">
-                            <div class="title-text-description">
-                                <h1 class="title-of-work ">{{ works.title }}</h1>
-                                <p class="description-name ">{{ works.description }}</p>
-                                {#                                <h1 class="title-name t2">Разработчик.</h1>#}
-
+                    {% if works.title %}
+                        <div class="swiper-slide black">
+                            <div class="work-image-container">
+                                {% if works.photo %}
+                                    <img src="{{ works.photo.url }}" alt="Технические чоколадки"
+                                         class="work-item-image">
+                                {% endif %}
+                                <div class="title-text-description">
+                                    <h1 class="title-of-work">{{ works.title }}</h1>
+                                    <p class="description-name">{{ works.description |linebreaksbr}}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% endif %}
+                    {% if works.title1 %}
+                        <div class="swiper-slide black">
+                            <div class="work-image-container">
+                                <div class="title-text-description">
+                                    <h1 class="title-of-work">{{ works.title1 }}</h1>
+                                    <p class="description-name">{{ works.description1|linebreaksbr }}</p>
+                                </div>
+                                {% if works.photo1 %}
+
+                                    <img src="{{ works.photo1.url }}" alt="Технические чоколадки"
+                                         class="work-item-image">
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
                     <div class="swiper-slide empty-slide half-slide">
                         <div class="half-element-5">
-
                         </div>
                         <div class="half-element">
                             <div class="description-container">
                                 <div class="title-text">
-                                    <h1 class="description" style="">Для меня нет ничего невозможного!</h1>
+                                    <a href="{{ works.link }}" style="text-decoration: none">
+                                        <h1 class="description" style="">Ссылка на работу</h1>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -40,11 +59,13 @@
                     {#                <div class="swiper-button-prev"></div>#}
                     {#                <div class="swiper-button-next"></div>#}
                     {##}
-                    {#                <!-- If we need scrollbar -->#}
-                    {#                <div class="swiper-scrollbar"></div>#}
+                    {#                                    <!-- If we need scrollbar -->#}
+                    {#                                    <div class="swiper-scrollbar"></div>#}
                 </div>
 
             </div>
+            <div class="swiper-scrollbar scroll-color"></div>
+
         </div>
 
     </main>

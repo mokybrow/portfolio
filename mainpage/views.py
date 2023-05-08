@@ -67,5 +67,5 @@ def work_item(request, work_slug):
 
 def post(request, post_slug):
     posts = get_object_or_404(Posts, slug=post_slug)
-    context = {'works': posts, 'title': posts.title}
-    return render(request, "mainpage/workItem.html", context=context)
+    context = {'posts': posts, 'title': posts.title}
+    return render(request, "mainpage/postItem.html", context=context)

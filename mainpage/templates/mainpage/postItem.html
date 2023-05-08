@@ -1,0 +1,106 @@
+{% extends 'mainpage/index.html' %}
+{% load static %}
+
+{% block content %}
+
+    <main>
+        <div class="post-page">
+            <div class="post-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper work-item-page-swiper">
+                    <!-- Slides -->
+                    <div class="swiper-slide post">
+                        <div class="post-container">
+                            {% if posts.photo %}
+                                <img src="{{ posts.photo.url }}" alt="Технические чоколадки" class="post-image">
+                            {% endif %}
+                            <div class="post-text-description ">
+                                <h1 class="title-of-post ">{{ posts.title }}</h1>
+                                <p class="post-text" align="justify">{{ posts.description|linebreaksbr  }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% if posts.description1 %}
+                        <div class="swiper-slide post">
+                            <div class="post-container">
+                                <div class="post-text-description">
+                                    <h1 class="title-of-post ">{{ posts.title1 }}</h1>
+                                    <p class="post-text" align="justify">{{ posts.description1|linebreaksbr  }}</p>
+                                </div>
+                                {% if posts.photo1 %}
+                                    <img src="{{ posts.photo1.url }}" alt="Технические чоколадки" class="post-image">
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if posts.description2 %}
+                        <div class="swiper-slide post">
+                            <div class="post-container">
+                                {% if posts.photo2 %}
+                                    <img src="{{ posts.photo2.url }}" alt="Технические чоколадки" class="post-image">
+                                {% endif %}
+                                <div class="post-text-description">
+                                    <h1 class="title-of-post ">{{ posts.title2 }}</h1>
+                                    <p class="post-text" align="justify">{{ posts.description2|linebreaksbr }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+
+                    {% if posts.description3 %}
+                        <div class="swiper-slide post">
+                            <div class="post-container">
+                                <div class="post-text-description">
+                                    <h1 class="title-of-post ">{{ posts.title3 }}</h1>
+                                    <p class="post-text" align="justify">{{ posts.description3|linebreaksbr  }}</p>
+                                </div>
+                                {% if posts.photo3 %}
+                                    <img src="{{ posts.photo3.url }}" alt="Технические чоколадки" class="post-image">
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if posts.description4 %}
+                        <div class="swiper-slide post">
+                            <div class="post-container">
+                                {% if posts.photo4 %}
+                                    <img src="{{ posts.photo4.url }}" alt="Технические чоколадки" class="post-image">
+                                {% endif %}
+                                <div class="post-text-description">
+                                    <h1 class="title-of-post ">{{ posts.title4 }}</h1>
+                                    <p class="post-text" align="justify">{{ posts.description4|linebreaksbr  }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    <div class="swiper-slide empty-slide half-slide">
+                        <div class="half-element-5">
+                        </div>
+                        <div class="half-element">
+                            <div class="description-container">
+                                <div class="title-text">
+                                    <h1 class="description" style="">Ссылка на работу</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    {#                <!-- If we need navigation buttons -->#}
+                    {#                <div class="swiper-button-prev"></div>#}
+                    {#                <div class="swiper-button-next"></div>#}
+                    {##}
+
+                </div>
+            </div>
+           <div class="swiper-scrollbar"></div>
+        </div>
+
+    </main>
+{% endblock %}

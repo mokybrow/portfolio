@@ -52,26 +52,14 @@ const mainSwiper = new Swiper('.main-swiper', {
     freeMode: true,
     mousewheel: true,
     slidesPerView: 1,
+    simulateTouch: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 });
-const portfolioSwiper = new Swiper('.portfolio-swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    speed: 800,
-    loop: false,
-    freeMode: true,
-    mousewheel: true,
-    slidesPerView: 1,
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
+
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
@@ -81,6 +69,7 @@ const swiper = new Swiper('.swiper', {
     freeMode: true,
     mousewheel: true,
     slidesPerView: 2,
+    simulateTouch: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -97,8 +86,7 @@ const blogSwiper = new Swiper('.blog-swiper', {
     freeMode: true,
     mousewheel: true,
     slidesPerView: 2,
-
-
+    simulateTouch: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -114,6 +102,7 @@ const contactsSwiper = new Swiper('.contacts-swiper', {
     freeMode: true,
     mousewheel: true,
     slidesPerView: 1,
+    simulateTouch: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -129,6 +118,7 @@ const helloSwiper = new Swiper('.hello-swiper', {
     freeMode: true,
     mousewheel: true,
     slidesPerView: 1,
+    simulateTouch: false,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
@@ -136,7 +126,47 @@ const helloSwiper = new Swiper('.hello-swiper', {
     },
 });
 
+const portfolioSwiper = new Swiper('.portfolio-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 1,
+    simulateTouch: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        dragEl: '.swiper-scrollbar-drag',
+        draggable: true,
+    },
+});
 
+const postsSwiper = new Swiper('.post-swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    speed: 800,
+    loop: false,
+    freeMode: true,
+    mousewheel: true,
+    slidesPerView: 1,
+    simulateTouch: false,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        dragEl: '.swiper-scrollbar-drag',
+        draggable: true
+    },
+});
 
 //Звёздочки
 function init() {
