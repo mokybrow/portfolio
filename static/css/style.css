@@ -501,6 +501,7 @@ body.lock {
     display: flex;
     /*margin-right: 10vw;*/
     padding: 5vh 5vw;
+
 }
 
 .title-text-description {
@@ -718,7 +719,6 @@ body.lock {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #fafafa;
 }
 
 
@@ -838,6 +838,7 @@ body.lock {
     border-radius: 10px;
     max-width: 100vw;
     overflow: hidden;
+    /*object-fit: scale-down;*/
 }
 
 .blog-page {
@@ -867,6 +868,7 @@ body.lock {
     border-radius: 10px;
     justify-content: center;
     margin: 5px 5px;
+    z-index: 2;
 }
 
 .contacts-container {
@@ -909,6 +911,7 @@ body.lock {
     border-radius: 10px;
     justify-content: center;
     margin: 5px 5px;
+    z-index: 2;
 }
 
 .form-container {
@@ -1089,6 +1092,7 @@ hr {
     background: none;
     position: absolute;
     padding: 3px 0;
+    z-index: 2;
 }
 
 .swiper-scrollbar {
@@ -1166,6 +1170,7 @@ hr {
     background: none;
     position: absolute;
     overflow: hidden;
+    z-index: 2;
 }
 
 .contacts-swiper {

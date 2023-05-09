@@ -18,6 +18,9 @@ class Works(models.Model):
     def get_absolute_url(self):
         return reverse('works', kwargs={'work_slug': self.slug})
 
+    class Meta:
+        verbose_name = 'Работы'
+        verbose_name_plural = 'Работы'
 
 class Posts(models.Model):
     title = models.CharField(max_length=120)
@@ -40,6 +43,10 @@ class Posts(models.Model):
 
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
+
+    class Meta:
+        verbose_name = 'Посты'
+        verbose_name_plural = 'Посты'
 
 
 def __str__(self):
