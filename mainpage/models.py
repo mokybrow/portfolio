@@ -5,11 +5,11 @@ from django.urls import reverse
 # Create your models here.
 
 class Works(models.Model):
-    title = models.CharField(max_length=80)
+    title = models.CharField(max_length=80, verbose_name='Основное название работы')
     title1 = models.CharField(max_length=120, blank=True)
-    description = models.TextField(blank=True, max_length=750)
+    description = models.TextField(blank=True, max_length=750, verbose_name='Основное описание проекта')
     description1 = models.TextField(blank=True, max_length=750)
-    photo = models.ImageField(upload_to="photos/%Y/%m")
+    photo = models.ImageField(upload_to="photos/%Y/%m", verbose_name='Основное медиа проекта')
     photo1 = models.ImageField(upload_to="photos/%Y/%m", blank=True)
     is_published = models.BooleanField(default=True)
     link = models.TextField(blank=True)
@@ -22,18 +22,19 @@ class Works(models.Model):
         verbose_name = 'Работы'
         verbose_name_plural = 'Работы'
 
+
 class Posts(models.Model):
-    title = models.CharField(max_length=120)
+    title = models.CharField(max_length=120, verbose_name='Основное название статьи')
     title1 = models.CharField(max_length=120, blank=True)
     title2 = models.CharField(max_length=120, blank=True)
     title3 = models.CharField(max_length=120, blank=True)
     title4 = models.CharField(max_length=120, blank=True)
-    description = models.TextField(blank=True, max_length=750)
+    description = models.TextField(blank=True, max_length=750, verbose_name='Основное описание статьи')
     description1 = models.TextField(blank=True, max_length=750)
     description2 = models.TextField(blank=True, max_length=750)
     description3 = models.TextField(blank=True, max_length=750)
     description4 = models.TextField(blank=True, max_length=750)
-    photo = models.ImageField(upload_to="posts/%Y/%m")
+    photo = models.ImageField(upload_to="posts/%Y/%m", verbose_name='Основное фото статьи')
     photo1 = models.ImageField(upload_to="posts/%Y/%m", blank=True)
     photo2 = models.ImageField(upload_to="posts/%Y/%m", blank=True)
     photo3 = models.ImageField(upload_to="posts/%Y/%m", blank=True)
